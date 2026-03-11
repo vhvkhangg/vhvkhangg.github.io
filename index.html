@@ -1,528 +1,89 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en">
-
+<html lang="vi">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Software Engineer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#4f46e5",
-                        "accent": "#22c55e",
-                        "background-light": "#ffffff",
-                        "background-dark": "#0f172a",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/20">
-    <header class="fixed top-0 z-50 w-full border-b border-slate-200/60 dark:border-slate-800 glass-effect">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-            <div class="flex items-center gap-2">
-                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
-                    <span class="material-symbols-outlined text-xl">terminal</span>
-                </div>
-                <span class="text-xl font-bold tracking-tight">DevPortfolio</span>
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="name">Chris Tran</h1>
+            
+            <img src="https://via.placeholder.com/200" alt="Avatar" class="avatar">
+            
+            <div class="links">
+                <a href="#">Resume</a> | 
+                <a href="#">LinkedIn</a> | 
+                <a href="#">GitHub</a>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a class="hover:text-primary transition-colors" href="#projects">Projects</a>
-                <a class="hover:text-primary transition-colors" href="#skills">Skills</a>
-                <a class="hover:text-primary transition-colors" href="#experience">Experience</a>
-                <a class="hover:text-primary transition-colors" href="#about">About</a>
-                <a class="px-5 py-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-all shadow-sm"
-                    href="#contact">Contact Me</a>
-            </div>
-            <button class="md:hidden">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-        </nav>
-    </header>
-    <main class="pt-24">
-        <section class="relative overflow-hidden px-6 py-20 lg:py-32">
-            <div
-                class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.primary/5),transparent)]">
-            </div>
-            <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="flex flex-col gap-8">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
-                        <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                        </span>
-                        Available for new projects
-                    </div>
-                    <h1
-                        class="text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white">
-                        Building the future of the <span class="text-primary">web</span>
-                    </h1>
-                    <p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-                        Full Stack Developer / Software Engineer. I craft high-performance, scalable web applications
-                        with a focus on premium user experience and modern architecture.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a class="flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all"
-                            href="#projects">
-                            View Projects
-                        </a>
-                        <a class="flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-8 py-4 text-sm font-bold hover:bg-slate-50 transition-all"
-                            href="#contact">
-                            Contact Me
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div
-                        class="aspect-square w-full max-w-lg mx-auto rounded-2xl bg-gradient-to-tr from-primary to-indigo-400 p-1 shadow-2xl">
-                        <div
-                            class="h-full w-full bg-white dark:bg-slate-900 rounded-[calc(1rem-4px)] overflow-hidden flex items-center justify-center relative">
-                            <img alt="Profile Photo"
-                                class="object-cover h-full w-full grayscale hover:grayscale-0 transition-all duration-500"
-                                data-alt="Professional portrait of a software engineer smiling"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA15fZW9qUWHC2lvVo7i_lKg9cc_yd6pIvOwX6FJ2GQ539JcWFAlBsyGXrqtscZw6Ruc83wPqPM3RE-1ONjBilAMzs8jnutEQrXD39OADApSezKajxWvhRDs5VNEqDxvsY8auE3f03H7JItqeLF8qmrUWTfNgeR8YAatARE0cAffc2yVyIXHReuUQTnl3CRiw2Ku8ROm0ApzZJKopaKCsZ_lAbvrtq1C1rN2c7RHQI7Do01vSbBNJku6JdL-M2PmYSFy04BAwoKbJo" />
-                            <div
-                                class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur p-4 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700">
-                                <div class="flex items-center gap-3">
-                                    <div
-                                        class="size-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
-                                        <span class="material-symbols-outlined">verified</span>
-                                    </div>
-                                    <div>
-                                        <p class="text-xs font-bold text-slate-500 uppercase">Success Rate</p>
-                                        <p class="text-lg font-bold">100% Delivery</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="skills">
-            <div class="mx-auto max-w-7xl px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Technical Expertise</h2>
-                    <p class="text-slate-600 dark:text-slate-400">Mastering the stack to build robust digital solutions.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div
-                        class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
-                        <div
-                            class="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined">devices</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3">Frontend</h3>
-                        <p class="text-sm text-slate-500 mb-6">Building reactive and pixel-perfect user interfaces.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">React</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">JavaScript</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">Tailwind</span>
-                        </div>
-                    </div>
-                    <div
-                        class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
-                        <div
-                            class="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined">data_object</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3">Backend</h3>
-                        <p class="text-sm text-slate-500 mb-6">Developing scalable server-side logic and APIs.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">Java</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">PHP</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">Node.js</span>
-                        </div>
-                    </div>
-                    <div
-                        class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
-                        <div
-                            class="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined">database</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3">Databases</h3>
-                        <p class="text-sm text-slate-500 mb-6">Designing efficient and secure data structures.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">MySQL</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">PostgreSQL</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">Redis</span>
-                        </div>
-                    </div>
-                    <div
-                        class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
-                        <div
-                            class="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined">construction</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3">DevOps &amp; Tools</h3>
-                        <p class="text-sm text-slate-500 mb-6">Streamlining development and deployment.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">Git</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">Docker</span>
-                            <span
-                                class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium">AWS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24" id="projects">
-            <div class="mx-auto max-w-7xl px-6">
-                <div class="flex items-end justify-between mb-12">
-                    <div>
-                        <h2 class="text-3xl font-bold tracking-tight mb-2">Featured Projects</h2>
-                        <p class="text-slate-600 dark:text-slate-400">Selected works that showcase my engineering
-                            capabilities.</p>
-                    </div>
-                    <a class="hidden sm:flex items-center gap-2 text-primary font-semibold group" href="#">
-                        See all projects
-                        <span
-                            class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="flex flex-col gap-6 group">
-                        <div
-                            class="aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 shadow-lg relative">
-                            <div
-                                class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                                <button
-                                    class="p-3 bg-white dark:bg-slate-900 rounded-full text-slate-900 dark:text-white shadow-xl">
-                                    <span class="material-symbols-outlined">link</span>
-                                </button>
-                                <button
-                                    class="p-3 bg-white dark:bg-slate-900 rounded-full text-slate-900 dark:text-white shadow-xl">
-                                    <span class="material-symbols-outlined">code</span>
-                                </button>
-                            </div>
-                            <img class="w-full h-full object-cover"
-                                data-alt="Dashboard interface with colorful charts and analytics"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdc_ll4nlwKBMA3O-g7tfIz3RPvH7q874rkaQ6S03lHYcoZcnZ4lO7Y722UUrTfDgrSMC5ppEHZ0ddS4OfwOHn1GkkIZoeAH7yGYf62f2gl1MAGIsk3firijf7x9dCMwPFIP0EReRByfYYFdYR1dAVFeU1CgdzGgbUBwRxsOji0BPyNcSVgXGvaWIgYZ35I-d9RMeM-VAPcfOqdIvTijlMoHJ2ivP-MOOSEHJue6F07wi11XHYoc5aCBBJBuRBOFBxl4uY0vZhRAM" />
-                        </div>
-                        <div>
-                            <div class="flex gap-2 mb-3">
-                                <span
-                                    class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 bg-primary/10 text-primary rounded">SaaS</span>
-                                <span
-                                    class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 bg-accent/10 text-accent rounded">Live</span>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Nova
-                                Analytics Cloud</h3>
-                            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">A high-performance
-                                analytics platform built with React and Node.js, capable of processing millions of
-                                events in real-time.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs font-semibold text-slate-500">React</span>
-                                <span class="text-slate-300">•</span>
-                                <span class="text-xs font-semibold text-slate-500">TypeScript</span>
-                                <span class="text-slate-300">•</span>
-                                <span class="text-xs font-semibold text-slate-500">PostgreSQL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-6 group">
-                        <div
-                            class="aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 shadow-lg relative">
-                            <div
-                                class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                                <button
-                                    class="p-3 bg-white dark:bg-slate-900 rounded-full text-slate-900 dark:text-white shadow-xl">
-                                    <span class="material-symbols-outlined">link</span>
-                                </button>
-                                <button
-                                    class="p-3 bg-white dark:bg-slate-900 rounded-full text-slate-900 dark:text-white shadow-xl">
-                                    <span class="material-symbols-outlined">code</span>
-                                </button>
-                            </div>
-                            <img class="w-full h-full object-cover"
-                                data-alt="Modern mobile app UI showing task management features"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3jtYKjR2qztStCionoW3255eN3iaVhprlJ-yPDn2WKo-QQdNR7KPQzY-ky8RFt9W3rEMrPzQoYCpwWLQgrrLe0TyWjPvBKs3X9zbixt40A_H_iKhE6I9jekzFhDPELe07a-B1G_LapvuGfpe1ExnZC3VR0qVFyOG9dOPNZLoeKNOmP5nr4SWCnLP9x-L39rrGsvSnm8IgssA68bx23P73NV0a-iFHxDice8uEQuBqSYTi31uKZMrONkR-YwzwAAlfa4F4mnjRQKM" />
-                        </div>
-                        <div>
-                            <div class="flex gap-2 mb-3">
-                                <span
-                                    class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 bg-primary/10 text-primary rounded">Productivity</span>
-                                <span
-                                    class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded">Open
-                                    Source</span>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">TaskFlow
-                                Engine</h3>
-                            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">An automated workflow
-                                engine designed for remote teams to synchronize tasks across multiple platforms
-                                seamlessly.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs font-semibold text-slate-500">Next.js</span>
-                                <span class="text-slate-300">•</span>
-                                <span class="text-xs font-semibold text-slate-500">Redis</span>
-                                <span class="text-slate-300">•</span>
-                                <span class="text-xs font-semibold text-slate-500">AWS Lambda</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="experience">
-            <div class="mx-auto max-w-3xl px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold tracking-tight">Career Journey</h2>
-                </div>
-                <div
-                    class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 dark:before:via-slate-700 before:to-transparent">
-                    <div
-                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div
-                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-900 bg-slate-200 dark:bg-slate-800 text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            <span class="material-symbols-outlined text-sm">work</span>
-                        </div>
-                        <div
-                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition-all hover:shadow-md">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-slate-900 dark:text-white">Senior Software Engineer</div>
-                                <time class="font-medium text-primary text-sm">2021 – Present</time>
-                            </div>
-                            <div class="text-slate-500 text-sm mb-3">TechNova Solutions</div>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm">Leading the frontend architectural
-                                shift to Micro-frontends and improving system performance by 40%.</p>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div
-                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-900 bg-slate-200 dark:bg-slate-800 text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            <span class="material-symbols-outlined text-sm">work</span>
-                        </div>
-                        <div
-                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition-all hover:shadow-md">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-slate-900 dark:text-white">Full Stack Developer</div>
-                                <time class="font-medium text-slate-400 text-sm">2018 – 2021</time>
-                            </div>
-                            <div class="text-slate-500 text-sm mb-3">GreenLight Fintech</div>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm">Developed secure payment gateways and
-                                customer dashboards using React and Java Spring Boot.</p>
-                        </div>
-                    </div>
-                    <div
-                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                        <div
-                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-900 bg-slate-200 dark:bg-slate-800 text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            <span class="material-symbols-outlined text-sm">school</span>
-                        </div>
-                        <div
-                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition-all hover:shadow-md">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-slate-900 dark:text-white">B.Sc. Computer Science</div>
-                                <time class="font-medium text-slate-400 text-sm">2014 – 2018</time>
-                            </div>
-                            <div class="text-slate-500 text-sm mb-3">University of Engineering</div>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm">Specialized in Software Engineering
-                                and Distributed Systems. Graduated with honors.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24" id="about">
-            <div class="mx-auto max-w-7xl px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="relative">
-                        <div class="bg-primary/5 rounded-3xl p-8 lg:p-12 border border-primary/10">
-                            <h2 class="text-3xl font-bold mb-6">About Me</h2>
-                            <div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-                                <p>I am a software engineer with a passion for building clean, performant, and
-                                    accessible user experiences on the web. My journey in tech started over 8 years ago,
-                                    and I've been hooked ever since.</p>
-                                <p>I believe in the power of simple, well-written code and the importance of
-                                    user-centric design. When I'm not coding, you'll find me exploring new UI trends,
-                                    contributing to open-source, or sharing my knowledge through technical writing.</p>
-                            </div>
-                            <div class="mt-8 flex gap-4">
-                                <a class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:text-primary transition-colors"
-                                    href="#">
-                                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
-                                        <path
-                                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <a class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:text-primary transition-colors"
-                                    href="#">
-                                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div
-                                class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-                                <div class="text-3xl font-extrabold text-primary mb-1">50+</div>
-                                <div class="text-sm font-medium text-slate-500 uppercase tracking-wider">Projects
-                                    Completed</div>
-                            </div>
-                            <div
-                                class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-                                <div class="text-3xl font-extrabold text-primary mb-1">8+</div>
-                                <div class="text-sm font-medium text-slate-500 uppercase tracking-wider">Years Exp.
-                                </div>
-                            </div>
-                            <div
-                                class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-                                <div class="text-3xl font-extrabold text-primary mb-1">12k</div>
-                                <div class="text-sm font-medium text-slate-500 uppercase tracking-wider">GitHub Stars
-                                </div>
-                            </div>
-                            <div
-                                class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-                                <div class="text-3xl font-extrabold text-primary mb-1">200+</div>
-                                <div class="text-sm font-medium text-slate-500 uppercase tracking-wider">Coffee Cups
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 bg-slate-900 text-white" id="contact">
-            <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-4xl font-extrabold mb-6">Let's build something <span
-                            class="text-primary">extraordinary</span> together.</h2>
-                    <p class="text-slate-400 text-lg mb-8 leading-relaxed max-w-md">Currently open to freelance
-                        opportunities and full-time senior engineering roles. Let's discuss your next project.</p>
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="size-12 rounded-full bg-slate-800 flex items-center justify-center text-primary">
-                                <span class="material-symbols-outlined">mail</span>
-                            </div>
-                            <div>
-                                <p class="text-sm font-bold text-slate-400 uppercase">Email Me</p>
-                                <p class="text-lg">hello@devportfolio.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="size-12 rounded-full bg-slate-800 flex items-center justify-center text-primary">
-                                <span class="material-symbols-outlined">location_on</span>
-                            </div>
-                            <div>
-                                <p class="text-sm font-bold text-slate-400 uppercase">Location</p>
-                                <p class="text-lg">San Francisco, CA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl">
-                    <form action="#" class="space-y-6" method="POST">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
-                                <input
-                                    class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary text-slate-900 placeholder:text-slate-400 transition-all"
-                                    placeholder="John Doe" type="text" />
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
-                                <input
-                                    class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary text-slate-900 placeholder:text-slate-400 transition-all"
-                                    placeholder="john@example.com" type="email" />
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
-                            <textarea
-                                class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary text-slate-900 placeholder:text-slate-400 transition-all"
-                                placeholder="How can I help you?" rows="4"></textarea>
-                        </div>
-                        <button
-                            class="w-full py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
-                            type="submit">
-                            Send Message
-                            <span class="material-symbols-outlined text-sm">send</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="flex items-center gap-2">
-                <div class="flex h-6 w-6 items-center justify-center rounded bg-primary text-white">
-                    <span class="material-symbols-outlined text-xs">terminal</span>
-                </div>
-                <span class="text-sm font-bold tracking-tight">DevPortfolio</span>
-            </div>
-            <p class="text-slate-500 text-sm">© 2024 DevPortfolio. Built with precision and passion.</p>
-            <div class="flex items-center gap-6">
-                <a class="text-slate-400 hover:text-primary transition-colors" href="#">
-                    <span class="material-symbols-outlined">data_exploration</span>
+            
+            <p class="bio">
+                I am pursing MS degree in Business Analytics at Simon Business School, University of Rochester.
+            </p>
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">Portfolio</h1>
+            <hr>
+
+            <section class="project-section">
+                <h2>Natural Language Processing</h2>
+                <h3>CS224n: Natural Language Processing with Deep Learning</h3>
+                <p>My complete implementation of assignments and projects in <strong>CS224n: Natural Language Processing with Deep Learning</strong> by Stanford (Winter, 2019).</p>
+                
+                <a href="#" class="github-badge">
+                    <span class="icon">GitHub</span>
+                    <span class="text">View on GitHub</span>
                 </a>
-                <a class="text-slate-400 hover:text-primary transition-colors" href="#">
-                    <span class="material-symbols-outlined">share</span>
+
+                <div class="sub-project">
+                    <p><strong>Neural Machine Translation:</strong> An NMT system which translates texts from Spanish to English using a Bidirectional LSTM encoder for the source sentence and a Unidirectional LSTM Decoder with multiplicative attention for the target sentence (<a href="#">GitHub</a>).</p>
+                </div>
+
+                <div class="sub-project">
+                    <p><strong>Dependency Parsing:</strong> A Neural Transition-Based Dependency Parsing system with one-layer MLP (<a href="#">GitHub</a>).</p>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Web Development</h2>
+                <h3>E-Commerce Backend API</h3>
+                <p>Xây dựng hệ thống backend cho ứng dụng thương mại điện tử bán thiết bị điện tử. Thiết kế database, xử lý logic giỏ hàng và thanh toán.</p>
+                
+                <a href="#" class="github-badge">
+                    <span class="icon">GitHub</span>
+                    <span class="text">View on GitHub</span>
                 </a>
-                <a class="text-slate-400 hover:text-primary transition-colors" href="#">
-                    <span class="material-symbols-outlined">rss_feed</span>
+
+                <div class="sub-project">
+                    <p><strong>Spring Boot Architecture:</strong> Triển khai mô hình MVC với các Entity, Repository, Service và Controller. Sử dụng MapStruct để mapping DTO hiệu quả (<a href="#">GitHub</a>).</p>
+                </div>
+                
+                <div class="sub-project">
+                    <p><strong>Security:</strong> Tích hợp Spring Security và JWT để phân quyền người dùng và bảo vệ các API endpoints (<a href="#">GitHub</a>).</p>
+                </div>
+            </section>
+            
+            <section class="project-section">
+                <h2>Frontend Engineering</h2>
+                <h3>Responsive Web UI</h3>
+                <p>Phát triển giao diện người dùng hiển thị hoàn hảo trên mọi kích thước màn hình.</p>
+                
+                <a href="#" class="github-badge">
+                    <span class="icon">GitHub</span>
+                    <span class="text">View on GitHub</span>
                 </a>
-            </div>
-        </div>
-    </footer>
+
+                <div class="sub-project">
+                    <p><strong>React & Shadcn:</strong> Sử dụng React kết hợp với thư viện component Shadcn để xây dựng các block giao diện có tính tái sử dụng cao (<a href="#">GitHub</a>).</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
 </body>
-
 </html>

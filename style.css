@@ -1,164 +1,162 @@
-Thiết lập cơ bản & Biến màu sắc
-:root {
-    --primary-color: #2563eb; /* Màu xanh dương chủ đạo */
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f3f4f6;
-    --white: #ffffff;
-}
-
+/* Reset cơ bản và cấu hình Font chữ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt mà khi bấm menu */
 }
 
 body {
-    color: var(--text-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
     line-height: 1.6;
+    background-color: #fff;
+    padding: 40px 20px;
 }
 
+/* KHUNG CHỨA (Layout chia 2 cột) */
 .container {
-    max-width: 1100px;
+    display: flex;
+    align-items: flex-start; /* Rất quan trọng để sticky hoạt động */
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
+    gap: 60px; /* Khoảng cách giữa cột trái và phải */
 }
 
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
+/* =========================================
+   CỘT TRÁI (SIDEBAR) - PHÉP THUẬT NẰM Ở ĐÂY
+   ========================================= */
+.sidebar {
+    position: sticky;  /* Giữ cố định khi cuộn */
+    top: 40px;         /* Cách mép trên màn hình 40px */
+    width: 220px;
+    flex-shrink: 0;    /* Không cho cột này bị ép nhỏ lại */
     text-align: center;
-    position: relative;
 }
 
-/* Nút bấm (Buttons) */
-.btn {
-    display: inline-block;
-    padding: 10px 24px;
-    background-color: var(--primary-color);
-    color: var(--white);
+.name {
+    color: #4a75a7; /* Màu xanh đặc trưng */
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Tạo hình tròn */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.links {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: #4a75a7;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background 0.3s;
-}
-.btn:hover { background-color: #1d4ed8; }
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-.btn-outline:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
 }
 
-/* Header & Menu */
-header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.links a:hover {
+    text-decoration: underline;
 }
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
+
+.bio {
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+    text-align-last: center; /* Căn đều 2 bên nhưng dòng cuối ở giữa */
 }
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+
+/* =========================================
+   CỘT PHẢI (NỘI DUNG DỰ ÁN)
+   ========================================= */
+.content {
+    flex-grow: 1; /* Chiếm phần diện tích còn lại */
 }
-.logo span { color: var(--primary-color); }
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+
+.page-title {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 10px;
 }
-nav a {
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.project-section {
+    margin-bottom: 50px;
+}
+
+.project-section h2 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.project-section h3 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.project-section p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Làm cái nút GitHub y hệt trong ảnh */
+.github-badge {
+    display: inline-flex;
+    font-size: 12px;
+    color: #fff;
     text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-}
-nav a:hover { color: var(--primary-color); }
-
-/* Hero Section */
-.hero {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: var(--bg-light);
-}
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero h1 span { color: var(--primary-color); }
-.hero h2 { font-size: 1.5rem; color: var(--text-light); font-weight: 400; margin-bottom: 20px; }
-.hero p { max-width: 600px; margin: 0 auto 30px; color: var(--text-light); }
-
-/* About Section */
-.about { padding: 80px 0; }
-.about p { max-width: 800px; margin: 0 auto 30px; text-align: center; }
-.skills h3 { text-align: center; margin-bottom: 20px; }
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-.skill-tags span {
-    background-color: var(--bg-light);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-/* Projects Section */
-.projects {
-    padding: 80px 0;
-    background-color: var(--bg-light);
-}
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-.project-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-.project-card:hover { transform: translateY(-5px); }
-.project-card h3 { margin-bottom: 15px; }
-.project-card p { margin-bottom: 15px; color: var(--text-light); }
-.project-card strong { color: var(--text-dark); }
-
-/* Contact & Footer */
-.contact { padding: 80px 0; text-align: center; }
-.contact-links { margin-top: 30px; display: flex; flex-direction: column; gap: 15px; }
-.contact-links a { color: var(--primary-color); font-weight: 600; text-decoration: none; font-size: 1.1rem; }
-.contact-links a:hover { text-decoration: underline; }
-
-footer {
-    background-color: var(--text-dark);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 0;
+.github-badge .icon {
+    background-color: #555;
+    padding: 3px 6px;
 }
 
-/* Responsive cho điện thoại */
+.github-badge .text {
+    background-color: #4078c0;
+    padding: 3px 8px;
+}
+
+.sub-project {
+    margin-bottom: 15px;
+}
+
+.sub-project strong {
+    color: #222;
+}
+
+.sub-project a {
+    color: #4a75a7;
+    text-decoration: none;
+}
+
+.sub-project a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive cho điện thoại: Hủy sticky, xếp dọc từ trên xuống */
 @media (max-width: 768px) {
-    .header-container { flex-direction: column; justify-content: center; gap: 10px; }
-    .hero h1 { font-size: 2.2rem; }
-    nav ul { gap: 15px; }
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .sidebar {
+        position: relative; /* Hủy hiệu ứng sticky trên điện thoại */
+        top: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
