@@ -10,14 +10,14 @@
 
     <div class="container">
         <aside class="sidebar">
-            <h1 class="name">Chris Tran</h1>
+            <h1 class="name">Vũ Hồng Vĩnh Khang</h1>
             
             <img src="z7608357687626_5e39a717c5ce3a052ff0a8fab97cadad.jpg" alt="Avatar" class="avatar">
             
             <div class="links">
                 <a href="#">Resume</a> | 
                 <a href="#">LinkedIn</a> | 
-                <a href="#">GitHub</a>
+                <a href="https://github.com/vhvkhangg">GitHub</a>
             </div>
             
             <p class="bio">
@@ -30,47 +30,32 @@
             <hr>
 
             <section class="project-section">
-                <h2>Natural Language Processing</h2>
-                <h3>CS224n: Natural Language Processing with Deep Learning</h3>
-                <p>My complete implementation of assignments and projects in <strong>CS224n: Natural Language Processing with Deep Learning</strong> by Stanford (Winter, 2019).</p>
-                
-                <a href="#" class="github-badge">
-                    <span class="icon">GitHub</span>
-                    <span class="text">View on GitHub</span>
-                </a>
-
-                <div class="sub-project">
-                    <p><strong>Neural Machine Translation:</strong> An NMT system which translates texts from Spanish to English using a Bidirectional LSTM encoder for the source sentence and a Unidirectional LSTM Decoder with multiplicative attention for the target sentence (<a href="#">GitHub</a>).</p>
-                </div>
-
-                <div class="sub-project">
-                    <p><strong>Dependency Parsing:</strong> A Neural Transition-Based Dependency Parsing system with one-layer MLP (<a href="#">GitHub</a>).</p>
-                </div>
-            </section>
-
-            <section class="project-section">
                 <h2>Web Development</h2>
-                <h3>E-Commerce Backend API</h3>
-                <p>Xây dựng hệ thống backend cho ứng dụng thương mại điện tử bán thiết bị điện tử. Thiết kế database, xử lý logic giỏ hàng và thanh toán.</p>
+                <h3>E-Commerce Platform for Electronic Devices</h3>
+                <p>Developed a monolithic e-commerce platform specializing in electronic devices utilizing the MVC architecture. As a Backend Developer focused on the Admin portal, I engineered robust RESTful APIs using Java Spring Boot to manage product inventory, process orders, and handle administrative operations, ensuring seamless integration with a ReactJS frontend and PostgreSQL database.</p>
                 
-                <a href="#" class="github-badge">
+                <a href="https://github.com/chivan2925/ElectronicsManagement" class="github-badge">
                     <span class="icon">GitHub</span>
                     <span class="text">View on GitHub</span>
                 </a>
 
                 <div class="sub-project">
-                    <p><strong>Spring Boot Architecture:</strong> Triển khai mô hình MVC với các Entity, Repository, Service và Controller. Sử dụng MapStruct để mapping DTO hiệu quả (<a href="#">GitHub</a>).</p>
+                    <p><strong>Backend Architecture (Monolithic MVC):</strong> Implemented a structured monolithic architecture utilizing Spring Boot's MVC pattern (Entity, Repository, Service, and Controller layers). Leveraged MapStruct for efficient Object-to-DTO mapping and data transfer optimization (<a href="#">GitHub</a>).</p>
                 </div>
                 
                 <div class="sub-project">
-                    <p><strong>Security:</strong> Tích hợp Spring Security và JWT để phân quyền người dùng và bảo vệ các API endpoints (<a href="#">GitHub</a>).</p>
+                    <p><strong>Authentication & Security:</strong> Integrated Spring Security and JWT (JSON Web Tokens) to establish secure, stateless authentication. Implemented strict Role-Based Access Control (RBAC) to protect sensitive Admin API endpoints (<a href="#">GitHub</a>).</p>
+                </div>
+
+                <div class="sub-project">
+                    <p><strong>Admin Management & Database:</strong> Engineered core administrative features including product catalog management and user administration. Designed and managed the relational database schema using PostgreSQL to ensure data integrity and high performance (<a href="#">GitHub</a>).</p>
                 </div>
             </section>
             
             <section class="project-section">
-                <h2>Frontend Engineering</h2>
-                <h3>Responsive Web UI</h3>
-                <p>Phát triển giao diện người dùng hiển thị hoàn hảo trên mọi kích thước màn hình.</p>
+                <h2>Generative AI & NLP</h2>
+                <h3>SmartDoc AI - Intelligent Document Q&A System</h3>
+                <p>Developed a local, privacy-focused Retrieval-Augmented Generation (RAG) system that allows users to upload PDF documents and ask context-aware questions in multiple languages[cite: 181, 182, 183, 627].</p>
                 
                 <a href="#" class="github-badge">
                     <span class="icon">GitHub</span>
@@ -78,7 +63,15 @@
                 </a>
 
                 <div class="sub-project">
-                    <p><strong>React & Shadcn:</strong> Sử dụng React kết hợp với thư viện component Shadcn để xây dựng các block giao diện có tính tái sử dụng cao (<a href="#">GitHub</a>).</p>
+                    <p><strong>Document Processing & Vector Search:</strong> Implemented a data pipeline using LangChain and PDFPlumber for text extraction and document chunking[cite: 425, 432, 585]. Utilized HuggingFace's Multilingual MPNet embeddings to convert text into 768-dimensional vectors, indexing them efficiently with FAISS for semantic similarity search[cite: 284, 427, 429].</p>
+                </div>
+                
+                <div class="sub-project">
+                    <p><strong>LLM Integration & Prompt Engineering:</strong> Integrated the Qwen2.5:7b large language model via Ollama for local, cost-free inference[cite: 250, 430, 628]. Designed custom prompts with automatic language detection to generate accurate, concise answers based strictly on the retrieved context[cite: 411, 414].</p>
+                </div>
+
+                <div class="sub-project">
+                    <p><strong>Frontend Interface:</strong> Built a user-friendly web interface using Streamlit, featuring drag-and-drop file uploads, real-time query processing, and comprehensive error handling[cite: 422, 564, 569, 592].</p>
                 </div>
             </section>
 
